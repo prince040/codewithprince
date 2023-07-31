@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    user-select: none;
+    user-zoom: none;
+   
+}
+body{
+    background-color: #f5f5f5;
+}
+.loader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    background: #f5f5f5;
+}
+.loader .rounder{
+    width: 100px;
+    height: 100px;
+    border: 7px solid #000;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: load 1s linear infinite;
+    transform-origin: center;
+
+}
+@keyframes load {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    /* isko auto karna hai */
+}
+.menus{
+    background: #f5f5f565;
+    backdrop-filter: blur(20px);
+    border: 1px solid grey;
+}
+.header{
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 35px;
+    background: #f5f5f5;
+    /* border: 1px solid; */
+}
+.menus ul li{
+    list-style: none;
+    display: inline-block;
+    color: #000;
+    margin: 0px 12px;
+    padding: 15px 0px;
+    /* border: 1px solid; */
+    cursor: pointer;
+}
+.menus ul li:hover{
+    color: #ff7707;
+}
+.menus i{
+    margin-right:  15px;
+    color: #ff7707;
+}
+.menus ul li:hover i{
+    color: #008cff;
+}
+.header .displayNone{
+    display: none;
+}
+.header .fa-angle-down{
+ margin-left: 8px;
+ transform-origin: center;
+ /* transform: rotate(-90deg); */
+}
+
+
+
+.menus #Items:hover .subMenus{
+    display: block;
+
+}
+.menus .subMenus{
+    width: 520px;
+    border: 1px solid grey;
+    position: absolute;
+    top: 56px;
+    display: none;
+    right: 70px;
+    background: #f5f5f5;
+    box-shadow: 0px 10px 25px #00000017;
+    border-radius: 3px;
+    text-align: center;
+    word-wrap: wrap;
+
+}
+.menus .subMenus li{
+     
+    padding: 5px 0px;
+  
+    cursor: pointer;
+
+}
+
+.pprojects{
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid; */
+    position: relative;
+    top: 60px;
+    background-color: transparent;
+}
+.header .menus{
+    position: fixed;
+    left: -250px;
+    top: 60px;
+    width: 250px;
+    height: 100vh;
+    /* margin-left: -50px; */
+    transition: .2s;
+}
+.menus ul{
+    margin: 35px 15px;
+}
+.menus ul li{
+    display: block;
+    margin:5px 0px;
+    padding: 5px 0px;
+}
+.menus ul a{
+    text-decoration: none;
+}
+.container .fa-bars{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.collapse{
+    margin-left: 250px;
+}
+.pprojects{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    column-gap: 20px;
+    justify-content: center;
+   
+
+}
+.project1{
+width: 350px;
+height: auto;
+justify-items: flex-start;
+margin-bottom: 9px;  
+border: 1px solid grey;
+/* padding: 5px; */
+}
+
+.projectImage{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.projectImage img{
+    width: 100%;
+}
+.tittleBox{
+    width: 100%;
+    height: auto; 
+    display: grid;
+    grid-template-columns: 50px auto;
+    place-items: center;
+/*     
+    border-left: 1px solid grey ;
+    border-right: 1px solid grey ;
+    border-bottom: 1px solid grey ; */
+  
+}
+.adminLogo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;  
+    overflow: hidden;
+}
+.adminLogo img{
+    width: 100%;
+    border-radius: 50%;
+}
+#projectTittle{
+    /* width: calc(100% - 50px); */
+    line-height: 20px;
+    margin: 0px 5px;
+}
+#owner{
+    color: grey;
+    font-size: .8rem;
+}
+
+.projectViewer{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 25;
+    background: #f5f5f5;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: scroll;
+}
+.projectViewer .header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 18px;
+    position: fixed;
+    top: 0;
+    z-index: 26;
+    background: #f5f5f5;
+    box-shadow: 0px 0px 5px #0000008c;
+
+}
+.displayProject{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid rgb(110, 110, 110); */
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    justify-content: center;
+    background-color: #ececec;
+}
+.thambnail{
+    width: 350px;
+    height: auto;
+    padding: 5px;
+
+}
+
+.thambnail img{
+    width: 100%;
+}
+.titleOfPorject{
+    width: 60%;
+    height: auto;
+    padding: 5px 20px;
+    background: #fff;
+    padding: 10px 22px;
+    margin: 15px;
+    box-shadow: 0px 0px 15px #00000031;
+    border-radius: 5px;
+
+}
+.titleOfPorject .adminLogo{
+   margin-right: 15px;
+}
+#tittleOftitle{
+   line-height: 24px;
+}
+
+.ownerName{
+    color: grey;
+    font-weight: 400;
+}
+
+
+.fa-arrow-left{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.codePreview{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid rgb(206, 206, 206);
+    z-index: 50;
+    margin-top: 50px;
+}
+.codePreview img{
+    width: 100%;
+}
