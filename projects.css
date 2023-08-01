@@ -290,11 +290,14 @@ border: 1px solid grey;
 }
 .codePreview{
     width: 100%;
-    height: 100vh;
+    height: auto;
     border: 1px solid rgb(206, 206, 206);
     z-index: 50;
     margin-top: 50px;
 }
 .codePreview img{
-    width: 100%;
+   width: 80%;
+   position: relative;
+   left: 50%;
+   transform: translate(-50%);
 }
